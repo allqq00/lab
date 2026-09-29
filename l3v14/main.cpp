@@ -1,5 +1,5 @@
 #include <iostream>
-#include <Windows.h>
+
 
 using namespace std;
 
@@ -69,14 +69,12 @@ int row_sum(int r)
 
 int main()
 {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
 
-    cout << "Введите N (1-10): ";
+
+    cout << "Enter N (1-10): ";
     cin >> n;
-    cout << "Введите M (1-10): ";
+    cout << "Enter M (1-10): ";
     cin >> m;
-
 
     int count_odd = 0;
     for (int i = 0; i < n; i++)
@@ -97,7 +95,7 @@ int main()
         ord[i] = i;
     }
 
-    cout << "Введите a[0][0]: ";
+    cout << "Enter a[0][0]: ";
     cin >> val00;
 
     for (int i = 0; i < n; i++)
@@ -112,7 +110,7 @@ int main()
         }
     }
 
-    cout << "\nИсходная матрица:\n";
+    cout << "\nInitial matrix:\n";
     print_matrix();
 
     for (int i = 0; i < n - 1; i++)
@@ -128,7 +126,7 @@ int main()
         }
     }
 
-    cout << "\nОтсортированная матрица:\n";
+    cout << "\nSorted matrix:\n";
     print_matrix();
 
     int no_zero_cols = 0;
@@ -149,7 +147,7 @@ int main()
         }
     }
 
-    cout << "\nСтолбцов без нулей: " << no_zero_cols << "\n";
+    cout << "\nColumns without zeros: " << no_zero_cols << "\n";
 
     delete[] odd_arr;
     delete[] ord;
